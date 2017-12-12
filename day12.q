@@ -17,10 +17,12 @@ d12p1:{
 	}
 	
 d12p2:{
-	count distinct asc each{[x;n]
-		d:(value each(raze m-2)#'x)!value each raze (2+m:where each "-"=x)_'x;
+	d:(value each(raze m-2)#'x)!value each raze (2+m:where each "-"=x)_'x;
+	func:{[d;n]
 		e:();
 		while[count n:(raze d n) except e;e,:n];
 		distinct e
-		}[x;] each til count x
+		};		
+	while[count d;d:func[d;first key d] _d;c+:1];
+	c
 	}
