@@ -15,3 +15,12 @@ d12p1:{
 	while[count n:(raze d n) except e;e,:n];
 	count distinct e
 	}
+	
+d12p2:{
+	count distinct asc each{[x;n]
+		d:(value each(raze m-2)#'x)!value each raze (2+m:where each "-"=x)_'x;
+		e:();
+		while[count n:(raze d n) except e;e,:n];
+		distinct e
+		}[x;] each til count x
+	}
