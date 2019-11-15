@@ -8,12 +8,12 @@ while[(first input)~last input;
 
 
 //check where any number equals one previously and sum
-p1:{[input]
+d1p1:{[input]
     sum input where (=':)input
     }
 
 //roate the list half the length, and compare each both and sum
-p2:{[input] 
+d2p2:{[input] 
     sum input where input='rotate[(`int$(count input)%2);input]
     }
 
