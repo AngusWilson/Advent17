@@ -1,4 +1,0 @@
-input:" " vs/: read0 `:d4.txt
-
-d4p1:{sum not any each 1</:count each/: group each x}
-
